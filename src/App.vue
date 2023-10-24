@@ -4,6 +4,7 @@ import banner from './components/banner.vue';
 </script>
 
 <template>
+  <!-- 這邊切錯了，header應該是要固定在左邊，可以sroll是右邊區塊 -->
   <div class="view container-fluid p-0">
     <header_desktop />
     <banner />
