@@ -9,6 +9,9 @@ import banner from './components/banner.vue';
     <header_desktop />
     <banner />
   </div>
+  <div>
+    <p>11111111111</p>
+  </div>
   
 
 </template>
@@ -17,5 +20,6 @@ import banner from './components/banner.vue';
 .view {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 </style>
