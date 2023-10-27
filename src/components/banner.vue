@@ -9,7 +9,8 @@
 
 <style scoped lang="scss">
 #banner {
-    flex-basis: 100%;
+    width: 100%;
+    height: 100vh;
     .pic {
         width: 100%;
         height: 100%;

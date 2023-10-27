@@ -4,22 +4,28 @@ import banner from './components/banner.vue';
 </script>
 
 <template>
-  <!-- 這邊切錯了，header應該是要固定在左邊，可以sroll是右邊區塊 -->
-  <div class="view container-fluid p-0">
-    <header_desktop />
-    <banner />
-  </div>
-  <div>
-    <p>11111111111</p>
+  <div id="view" class="container-fluid p-0">
+    <header_desktop class="header_desktop"/>
+    <div id="wrap">
+      <banner />
+      
+    </div>
   </div>
   
-
 </template>
 
 <style scoped lang="scss">
-.view {
+#view {
   display: flex;
   flex-direction: row;
+  height: 100vh;
+}
+.header_desktop {
+  position: sticky;
+}
+#wrap {
+  flex-basis: 100%;
+  background-color: red;
   height: 100vh;
 }
 </style>
