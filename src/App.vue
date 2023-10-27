@@ -1,6 +1,7 @@
 <script setup>
 import header_desktop from './components/header_deaktop.vue';
 import banner from './components/banner.vue';
+import footer_vue from './components/footer.vue';
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import banner from './components/banner.vue';
     <header_desktop class="header_desktop"/>
     <div id="wrap">
       <banner />
-      
+      <footer_vue />
     </div>
   </div>
   
@@ -25,7 +26,6 @@ import banner from './components/banner.vue';
 }
 #wrap {
   flex-basis: 100%;
-  background-color: red;
   height: 100vh;
 }
 </style>

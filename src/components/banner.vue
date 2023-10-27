@@ -1,6 +1,8 @@
 <template>
     <div id="banner">
         <div class="pic"></div>
+        <!-- TODO alert待補 -->
+        <div class="alert_donate"></div>
     </div>
 </template>
 
