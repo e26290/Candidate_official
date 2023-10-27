@@ -1,6 +1,7 @@
 <script setup>
 import header_desktop from './components/header_deaktop.vue';
 import banner from './components/banner.vue';
+import index_content from './components/index_content.vue';
 import footer_vue from './components/footer.vue';
 </script>
 
@@ -9,6 +10,7 @@ import footer_vue from './components/footer.vue';
     <header_desktop class="header_desktop"/>
     <div id="wrap">
       <banner />
+      <index_content />
       <footer_vue />
     </div>
   </div>
