@@ -19,13 +19,12 @@ import footer_vue from './components/footer.vue';
 #view {
   display: flex;
   flex-direction: row;
-  height: 100vh;
 }
 .header_desktop {
   position: sticky;
+  top: 0;
 }
 #wrap {
   flex-basis: 100%;
-  height: 100vh;
 }
 </style>
