@@ -1,6 +1,8 @@
 <template>
     <div id="banner">
         <div class="pic"></div>
+        <!-- TODO alert待補 -->
+        <div class="alert_donate"></div>
     </div>
 </template>
 
@@ -9,7 +11,8 @@
 
 <style scoped lang="scss">
 #banner {
-    flex-basis: 100%;
+    width: 100%;
+    height: 100vh;
     .pic {
         width: 100%;
         height: 100%;
