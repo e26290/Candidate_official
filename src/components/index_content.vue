@@ -1,15 +1,25 @@
 <template>
     <div class="about tbp">
+        <div class="about_img"></div>
         <div class="basic_info">
-            <span>最軟Ｑ的候選人</span>
-            <!-- Name -->
-            <h2>ＱＱＱ</h2>
+            <span class="sectitle">身段最軟 Ｑ 的立委候選人</span>
+            <h2 class="name">吉吉語娜<span class="enName">CHICHI & YUNA</span></h2>
         </div>
     
         <div class="about_info">
             <div class="about_box">
-                <span class="slogan">slogan</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <!-- <span class="slogan">slogan</span> -->
+                <p>
+                各位鄉親父老大家好，我是立發委員候選人 語娜，副手 吉吉。
+                <br/>
+                我從小就養貓，對貓有著深厚的感情。我一直希望能夠為貓的權益發展做出貢獻，所以我決定參選立法委員。
+                <br/>
+                我有著豐富的鏟屎經驗，在處理各類貓咪問題方面有著獨到的見解。同時我也是一名狗派人士，曾經多次偷偷喂巷口的那條小黃。我相信，我的專業知識和熱心服務精神，能夠為廣大的貓市民、狗市民帶來切實的利益。
+                <br/>
+                我的副手是吉吉，今年 5 歲，是一個賓士貓。他是一名有著創新精神的貓青年，在摸爬打滾的領域具有深厚的造詣。他也是一名有責任感的團隊合作者，總是願意為他貓付出。我相信，他的專業能力和團隊合作精神，能夠為我的政見落地提供強有力的支持。
+                <br/>
+                我和吉吉都是這個國家的一份子，我們希望能夠用我們的努力，讓這座國家變得更加美好。我們誠摯地邀請您，投下您寶貴的一票，支持我們。
+                </p>
             </div>
         </div>
     </div>
@@ -179,21 +189,38 @@ const policies = reactive([
 
 .about {
     position: relative;
+    background-color: var(--gray_F3);
+    .about_img {
+        width: 100%;
+        height: 600px;
+        background-image: url(/images/img_about.png);
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .basic_info {
-        background-color: var(--primary-color);
+        background-color: var(--black);
+        color: var(--white);
         max-width: 60%;
         padding: 2.5rem;
+        padding-bottom: 3.5rem;
         @include flex($a:end);
         flex-direction: column;
+        position: relative;
+        top: -3rem;
         span, h2 {
             width: 45%;
             text-align: left;
+        }
+        .enName {
+            font-size: 1rem;
+            margin-left: 0.5rem;
         }
     }
     .about_info {
         @include flex($j:end);
         position: relative;
-        top: -30px;
+        top: -5rem;
         .about_box {
             background-color: var(--white);
             max-width: 70%;
@@ -207,6 +234,10 @@ const policies = reactive([
         }
         .slogan {
             font-size: 3rem;
+        }
+        p {
+            font-size: 1.25rem;
+            line-height: 150%;
         }
 
     }
