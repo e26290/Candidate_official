@@ -51,14 +51,20 @@ ul.nav {
     a {
         display: block;
         padding: 1.25rem 0;
-        border-bottom: dashed 1px #ccc;
-        // color: var(--danger-color);
+        border-bottom: dashed 1px var(--grey_CC);
     }
 }
 .btn-donate {
     width: 100%;
     padding: 12px 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
+    filter: brightness(95%);
+    color: var(--white);
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: var(--deepPink);
+    }
 }
 .media {
     @include flex($g:1.2rem);

@@ -10,6 +10,7 @@
                         <div class="timeline__content">
                             <img class="timeline__img" :src="data.img"/>
                             <h2 class="timeline__content-title">{{ data.name }}</h2>
+                            <span class="timeline__content-date">{{ data.date }}</span>
                             <p class="timeline__content-desc">{{ data.description }}</p>
                         </div>
                     </div>
@@ -24,17 +25,20 @@ import { reactive } from 'vue';
 
 const news = reactive([
     {
-        img: 'http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg',
-        name: '最新消息1',
-        description: 'He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.'
+        img: '/images/img_news_01.png',
+        name: '世界貓咪日',
+        date: '2023.02.02',
+        description: '「一群貓貓的心願，便是建立一個人貓共存的社會。」為推廣人貓共存、幸福生活這個理念，我們特別舉辦首次「吸貓節」希望能藉著這一天，向每一個台灣人推廣愛貓的訊息!'
     },  {
-        img: 'http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg',
-        name: '最新消息2',
-        description: 'He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.'
+        img: '/images/img_news_02.png',
+        name: '貓咪健走趴',
+        date: '2023.06.24',
+        description: '鼓勵民眾養成良好運動習慣，並且帶著小孩、寵物出門踏青。活動地點鄰近動物園，參加者須穿著或配戴動物相關主題服飾、配件等，邀市民朋友踴躍報名並盛裝參與，只要扮裝符合主題並完成闖關，即可獲精美小禮及抽獎券，有機會把提鍋等大獎抱回家。'
     },  {
-        img: 'http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg',
-        name: '最新消息3',
-        description: 'He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.'
+        img: '/images/img_news_03.png',
+        name: '喵喵頌',
+        date: '2023.08.09',
+        description: '我們會邀請國際知名演奏家舉辦一場音樂會，所得票額全數捐給流浪動物相關單位。我們是一群熱愛音樂的人，因為音樂美好我們的生命，所以我們同樣也關懷周遭每個的生命，不只要讓牠們活著，還要活得更好，讓這些生命感受到愛，就如同我們對音樂的熱愛。你我一起貢獻手上的資源，讓生命更美好，讓世界充滿更多愛。'
     }
 ]);
 
@@ -81,7 +85,7 @@ const news = reactive([
     height: 100%;
     margin-left: -1px;
     content: "";
-    background: #000;
+    background: var(--grey_D4);
     // @include responsive() {
     //   left: 40px;
     // }
@@ -158,7 +162,7 @@ const news = reactive([
   &-container {
     width: 100%;
     position: relative;
-    padding: 80px 0;
+    padding: 3rem 0;
     transition: .3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
