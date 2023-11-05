@@ -16,7 +16,7 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: greyscale;
   -webkit-text-size-adjust: 100%;
 
 }
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 h1 {
@@ -74,7 +74,7 @@ button {
 }
 
 button:hover {
-  border-color: var(--primary-color);
+  border-color: var(--primary);
 }
 
 button:focus,
@@ -95,7 +95,7 @@ ul {
   }
 
   a:hover {
-    color: var(--primary-color);
+    color: var(--primary);
   }
 
   button {
