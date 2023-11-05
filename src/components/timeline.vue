@@ -85,7 +85,7 @@ const news = reactive([
     height: 100%;
     margin-left: -1px;
     content: "";
-    background: var(--gray_D4);
+    background: var(--grey_D4);
     // @include responsive() {
     //   left: 40px;
     // }

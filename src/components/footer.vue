@@ -11,7 +11,7 @@
             <li><a href="#">聯絡我們</a></li>
             <li><a href="#">小額捐款</a></li>
         </ul>
-        <p class="copyright">© 2023 Gill WUUUU 版權所有，僅做2023 The F2E 活動專案練習使用。</p>
+        <p class="copyright">© 2023 Gill WUUUU 版權所有，僅做 2023 The F2E 活動專案練習使用。</p>
     </footer>
 </template>
 
@@ -27,6 +27,10 @@ footer {
     padding: 1.5rem;
     a {
         color: var(--white);
+
+        &:hover {
+            color: var(--primary);
+        }
     }
     ul {
         display: flex;
