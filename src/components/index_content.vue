@@ -70,17 +70,48 @@
             </div>
         </div>
         <div class="person_img">
+            <!-- 這張拿去ai重算 -->
             <img src="/images/img_person_3.png" alt="吉吉比讚">
         </div>
     </div>
 
-    <div class="goForm tbp">
+    <!-- TODO p高度調整 -->
+    <div class="contactUs">
         <div class="container">
             <div class="row d-flex justify-content-end">
                 <div class="col-md-6">
                     <h3>感謝您瀏覽我們的網頁</h3>
                     <p>如果您對政策服務項目感興趣或者對我們有任何的建議，歡迎留言給我們，我們將在收到資料後儘快與您聯絡。再次感謝您的光臨!</p>
-                    <button>留言給我們！</button>
+                    <!-- TODO 把表單切出去 -->
+                    <form class="contactUs_form">
+                        <div class="mb-3 form_item">
+                            <label for="exampleFormControlInput1" class="form-label">姓名</label>
+                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="您的大名">
+                        </div>
+                        <div class="mb-3 form_item">
+                            <label for="exampleFormControlInput1" class="form-label">信箱</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3 form_item">
+                            <label for="exampleFormControlInput1" class="form-label">手機</label>
+                            <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="09-">
+                        </div>
+                        <div class="mb-3 form_item">
+                            <label for="exampleFormControlTextarea1" class="form-label">留言</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">我同意您的任何無理的要求 喵 ฅ^•ﻌ•^ฅ</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送出留言</button>
+                    </form>
+                    <!-- 表單欄位：
+                        1. 您的姓名
+                        2. 您的 Email
+                        3. 您的手機
+                        4. 您的建言
+                        5. 送出意見按鈕 -->
                 </div>
             </div>
         </div>
@@ -92,7 +123,8 @@
             <div class="row d-flex justify-content-end">
                 <div class="col-md-6 content">
                     <h3>因為您 讓弱勢貓咪得到幫助</h3>
-                    <!-- TODO 這邊要查一下資料怎麼做選項的切換內容 -->
+                    <donate_form />
+                    <!-- 下面要刪除 -->
                     <!-- 選項 -->
                     <div class="donateRadio">
                         <label for="">
@@ -133,6 +165,7 @@
 <script setup>
 import timeline from './timeline.vue';
 import Carousel_vue from './carousel.vue';
+import donate_form from './donate_form.vue';
 import { reactive } from 'vue';
 
 const goal = reactive([
@@ -335,7 +368,7 @@ const policies = reactive([
         top: -3rem;
     }
 }
-.goForm {
+.contactUs {
     background-image: url(/images/img_conact_bg.png);
     background-position: center;
     background-size: cover;
@@ -346,6 +379,12 @@ const policies = reactive([
     }
     p {
         color: var(--grey_33);
+    }
+    .contactUs_form {
+        .form_item {
+            @include flex($a:start, $g:0.2rem);
+            flex-direction: column;
+        }
     }
 }
 .donate {
