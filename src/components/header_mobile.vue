@@ -1,14 +1,17 @@
 <template>
     <header class="header_mobile">
-        <!-- TODO 這裡要換logo橫式的 -->
-        <img src="../assets/img_logo_m.svg" alt="logo" class="logo">
-        <a href="#" class="btn-donate">
-            <i class="fa-solid fa-heart"></i>
-            小額捐款
-        </a>
-        <button type="button" @click="toggleMenu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="container-fluid d-flex justify-content-between">
+            <img src="../assets/img_logo_mb.svg" alt="logo" class="logo">
+            <div class="nav">
+                <a href="#" class="btn-donate">
+                    <i class="fa-solid fa-heart"></i>
+                    小額捐款
+                </a>
+                <button type="button" @click="toggleMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
     </header>
     <!-- 選單 -->
     <div v-if="showMenu" class="menu_view container-fluid">
@@ -57,10 +60,30 @@ function closeMenu() {
 @import "src/css/mixins.scss";
 
 header {
+    display: none;
     width: 100%;
     position: fixed;
     bottom: 0;
-    background-color: var(--grey_F3);
+    background-color: var(--white);
+    padding: 0 0.75rem;
+    box-shadow: 0 0 8px 4px rgba(0,0,0,0.15);
+    .logo{
+        width: 10rem;
+    }
+    .nav {
+        @include flex($a:stretch);
+        .btn-donate {
+            border-left: solid 1px var(--grey_D4);
+            border-right: solid 1px var(--grey_D4);
+            padding: 0 2rem;
+            @include flex;
+        }
+        button {
+            background-color: transparent;
+            color: var(--black);
+            padding: 1.5rem;
+        }
+    }
 }
 .menu_view {
     background-color: var(--grey_F3);
@@ -122,6 +145,15 @@ header {
     .media {
         @include flex($g:1.2rem);
         margin-top: 1.5rem;
+        a {
+            color: var(--grey_9F);
+        }
     }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: block;
+  }
 }
 </style>
