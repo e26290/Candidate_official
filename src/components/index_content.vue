@@ -1,5 +1,5 @@
 <template>
-    <div class="about tbp">
+    <div class="about tbp" v-if="false">
         <div class="about_img"></div>
         <div class="basic_info">
             <span class="sectitle">身段最軟 Ｑ 的立委候選人</span>
@@ -27,9 +27,9 @@
         </div>
     </div>
 
-    <timeline />
+    <!-- <timeline /> -->
 
-    <div class="activity tbp">
+    <div class="activity tbp" v-if="false">
         <div class="container">
             <div class="sectionTitle">展開行動</div>
 
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div class="policy tbp">
+    <div class="policy tbp" v-if="false">
         <div class="container">
             <div class="sectionTitle">政策議題</div>
             <div class="row">
@@ -76,42 +76,13 @@
     </div>
 
     <!-- TODO p高度調整 -->
-    <div class="contactUs">
+    <div class="contactUs tbp">
         <div class="container">
             <div class="row d-flex justify-content-end">
                 <div class="col-md-6">
                     <h3>感謝您瀏覽我們的網頁</h3>
-                    <p>如果您對政策服務項目感興趣或者對我們有任何的建議，歡迎留言給我們，我們將在收到資料後儘快與您聯絡。再次感謝您的光臨!</p>
-                    <!-- TODO 把表單切出去 -->
-                    <form class="contactUs_form">
-                        <div class="mb-3 form_item">
-                            <label for="exampleFormControlInput1" class="form-label">姓名</label>
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="您的大名">
-                        </div>
-                        <div class="mb-3 form_item">
-                            <label for="exampleFormControlInput1" class="form-label">信箱</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3 form_item">
-                            <label for="exampleFormControlInput1" class="form-label">手機</label>
-                            <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="09-">
-                        </div>
-                        <div class="mb-3 form_item">
-                            <label for="exampleFormControlTextarea1" class="form-label">留言</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">我同意您的任何無理的要求 喵 ฅ^•ﻌ•^ฅ</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">送出留言</button>
-                    </form>
-                    <!-- 表單欄位：
-                        1. 您的姓名
-                        2. 您的 Email
-                        3. 您的手機
-                        4. 您的建言
-                        5. 送出意見按鈕 -->
+                    <p>如果您對政策服務項目感興趣或者對我們有任何的建議，歡迎留言給我們。<br />我們將在收到資料後儘快與您聯絡。再次感謝您的光臨!</p>
+                    <contactUs_form />
                 </div>
             </div>
         </div>
@@ -124,47 +95,36 @@
                 <div class="col-md-6 content">
                     <h3>因為您 讓弱勢貓咪得到幫助</h3>
                     <donate_form />
-                    <!-- 下面要刪除 -->
-                    <!-- 選項 -->
-                    <div class="donateRadio">
-                        <label for="">
-                            <input type="radio">單筆捐款
-                        </label>
-                        <label for="">
-                            <input type="radio">定期捐款
-                        </label>
-                    </div>
-                    
-
-                    <!-- 單筆選項 -->
-                    <div class="onlyDonate">
-                        <button>$ 300</button>
-                        <button>$ 600</button>
-                        <button>$ 1,200</button>
-                        <button>自訂金額</button>
-                    </div>
-                    
-                    <!-- 定期選項 -->
-                    <div class="moonDonate">
-                        <button>$ 300 / 月</button>
-                        <button>$ 600 / 月</button>
-                        <button>$ 1,200 / 月</button>
-                        <button>自訂每月金額</button>
-                    </div>
-
-                    <!-- TODO 這個按鈕按下去會跳頁到小額捐款頁面 -->
-                    <button>馬上捐款！</button>
+                    <button type="button" class="btn btn-primary form_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        馬上捐款！
+                    </button>
                 </div>
             </div>
         </div>
-        
-        
+
+        <!-- 彈跳視窗 -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">已收到您的款項 ฅ^•ﻌ•^ฅ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>感謝您的捐款支持，今後也請您持續支持我們！</p>
+                    <!-- TODO 更換照片 -->
+                    <img src="/images/img_person_2.png" alt="語娜哈哈笑">
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </template>
 
 <script setup>
 import timeline from './timeline.vue';
 import Carousel_vue from './carousel.vue';
+import contactUs_form from './contactUs_form.vue';
 import donate_form from './donate_form.vue';
 import { reactive } from 'vue';
 
@@ -369,7 +329,7 @@ const policies = reactive([
     }
 }
 .contactUs {
-    background-image: url(/images/img_conact_bg.png);
+    // background-image: url(/images/img_conact_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -380,16 +340,10 @@ const policies = reactive([
     p {
         color: var(--grey_33);
     }
-    .contactUs_form {
-        .form_item {
-            @include flex($a:start, $g:0.2rem);
-            flex-direction: column;
-        }
-    }
 }
 .donate {
     border-top: solid 1px var(--white);
-    background-image: url(/images/img_donate_bg.png);
+    // background-image: url(/images/img_donate_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -399,6 +353,12 @@ const policies = reactive([
     }
     .donateRadio, .onlyDonate, .moonDonate {
         @include flex;
+    }
+    .modal-body img {
+        width: 30%;
+    }
+    .form_btn {
+        margin-top: 1rem;
     }
 }
 

@@ -9,7 +9,7 @@ import footer_vue from './components/footer.vue';
   <div id="view" class="container-fluid p-0">
     <header_desktop class="header_desktop"/>
     <div id="wrap">
-      <banner />
+      <banner v-if="false"/>
       <index_content />
       <footer_vue />
     </div>
@@ -28,5 +28,11 @@ import footer_vue from './components/footer.vue';
 }
 #wrap {
   flex-basis: 100%;
+}
+
+@media (max-width: 768px) {
+  .header_desktop {
+    display: none;
+  }
 }
 </style>
