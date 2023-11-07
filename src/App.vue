@@ -9,9 +9,9 @@ import footer_vue from './components/footer.vue';
 <template>
   <div id="view" class="container-fluid p-0">
     <header_desktop class="header_desktop"/>
-    <header_mobile class="header_mobile" />
+    <header_mobile />
     <div id="wrap">
-      <banner v-if="false"/>
+      <banner v-if="true"/>
       <index_content />
       <footer_vue />
     </div>
@@ -28,19 +28,7 @@ import footer_vue from './components/footer.vue';
   position: sticky;
   top: 0;
 }
-.header_mobile {
-  display: none;
-}
 #wrap {
   flex-basis: 100%;
-}
-
-@media (max-width: 768px) {
-  .header_desktop {
-    display: none;
-  }
-  .header_mobile {
-    // display: block;
-  }
 }
 </style>

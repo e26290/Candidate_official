@@ -35,7 +35,7 @@ const carouselData = reactive([
     {
         img: '/images/img_carousel_01.png',
         name: '蛋蛋昨天還在的｜社區免費結紮服務站',
-        description: `2023年10月10日，我們在市民廣場舉辦了貓咪社區免費結紮活動。活動當天，共有 50 名貓咪接受了免費結紮手術。競選部表示，此次活動是對社區流浪貓咪的一次關愛，希望通過活動，讓更多流浪貓咪得到妥善安置，減少流浪貓咪對環境的影響。此外，活動還為參與活動的市民提供宣傳教育，呼籲市民關注流浪動物保護。此次活動得到了市民的廣泛好評。
+        description: `2023年10月10日，我們在市民廣場舉辦了貓咪社區免費結紮活動。活動當天，共有 50 名貓咪接受了免費結紮手術。競選部表示，此次活動是對社區流浪貓咪的一次關愛，希望通過活動，讓更多流浪貓咪得到妥善安置，減少流浪貓咪對環境的影響。
             
             #關注流浪動物保護 #減少流浪動物數量 #讓流浪動物得到妥善安置`,
         active: true
@@ -77,5 +77,15 @@ const carouselData = reactive([
 }
 .carousel-indicators button {
     background-color: var(--primary);
+}
+
+@media (max-width:1200px) {
+    .text-carousel {
+        position: relative;
+        left: 0;
+        padding: 2rem;
+    }
+    
+    
 }
 </style>

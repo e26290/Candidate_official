@@ -1,5 +1,5 @@
 <template>
-    <div class="about tbp" v-if="false">
+    <div class="about tbp" v-if="true">
         <div class="about_img"></div>
         <div class="basic_info">
             <span class="sectitle">身段最軟 Ｑ 的立委候選人</span>
@@ -27,9 +27,9 @@
         </div>
     </div>
 
-    <!-- <timeline /> -->
+    <timeline />
 
-    <div class="activity tbp" v-if="false">
+    <div class="activity tbp" v-if="true">
         <div class="container">
             <div class="sectionTitle">展開行動</div>
 
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div class="policy tbp" v-if="false">
+    <div class="policy tbp" v-if="true">
         <div class="container">
             <div class="sectionTitle">政策議題</div>
             <div class="row">
@@ -112,8 +112,7 @@
                 </div>
                 <div class="modal-body">
                     <p>感謝您的捐款支持，今後也請您持續支持我們！</p>
-                    <!-- TODO 更換照片 -->
-                    <img src="/images/img_person_2.png" alt="語娜哈哈笑">
+                    <img src="/images/img_person_4.png" alt="語娜拜偷拜偷">
                 </div>
             </div>
         </div>
@@ -216,7 +215,7 @@ const policies = reactive([
         flex-direction: column;
         position: relative;
         span, h2 {
-            width: 60%;
+            width: 41%;
             text-align: left;
         }
         .enName {
@@ -230,7 +229,7 @@ const policies = reactive([
         top: -2rem;
         .about_box {
             background-color: var(--white);
-            max-width: 80%;
+            max-width: 70%;
             padding: 2.5rem;
             @include flex($a: end);
             flex-direction: column;
@@ -329,7 +328,7 @@ const policies = reactive([
     }
 }
 .contactUs {
-    // background-image: url(/images/img_conact_bg.png);
+    background-image: url(/images/img_conact_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -343,7 +342,7 @@ const policies = reactive([
 }
 .donate {
     border-top: solid 1px var(--white);
-    // background-image: url(/images/img_donate_bg.png);
+    background-image: url(/images/img_donate_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -353,13 +352,19 @@ const policies = reactive([
     }
     .donateRadio, .onlyDonate, .moonDonate {
         @include flex;
+        flex-wrap: wrap
     }
     .modal-body img {
-        width: 30%;
+        width: 60%;
     }
     .form_btn {
         margin-top: 1rem;
     }
 }
 
+@media (max-width: 1200px) {
+    .person_img img {
+        transform: scale(0.33);
+    }
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
     <header>
-        <!-- <img src="../assets/img_logo.svg" alt="logo" class="logo"> -->
+        <img src="../assets/img_logo.svg" alt="logo" class="logo">
         <ul class="nav">
             <li class="nav_item"><a href="#">個人簡介</a></li>
             <li class="nav_item"><a href="#">最新消息</a></li>
@@ -68,5 +68,14 @@ ul.nav {
 .media {
     @include flex($g:1.2rem);
     margin-top: 1.5rem;
+    a {
+        color: var(--grey_9F);
+    }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
 }
 </style>

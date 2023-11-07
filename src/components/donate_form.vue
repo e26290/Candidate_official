@@ -58,6 +58,10 @@ function setCustomInputState(state) {
 }
 .donateOption {
     @include flex;
+    button, input {
+        background-color: var(--white);
+        color: var(--black);
+    }
     .active {
         background-color: var(--primary);
         color: var(--white);

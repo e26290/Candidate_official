@@ -91,4 +91,18 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    #banner .text-title {
+        left: 2rem;
+        bottom: 2rem;
+        .bigTitle {
+            font-size: 3rem;
+        }
+    }
+    #banner .text-name {
+        top: 2rem;
+        right: 2rem;
+    }
+}
 </style>
