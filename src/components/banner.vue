@@ -17,11 +17,11 @@
         <!-- TODO 連結待補 -->
         <div class="alert_donate">
             <div class="info">
-                您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。
+                您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。如果您能為牠們做些什麼，會是多麼美好的事～
             </div>
             <div class="a_links">
-                <a href="#">單筆捐款</a>
-                <a href="#">定期捐款</a>
+                <a href="#" class="onlyDonate">單筆捐款</a>
+                <a href="#" class="moonDonate">定期捐款</a>
             </div>
         </div>
     </div>
@@ -46,8 +46,8 @@
     }
     .text-title {
         position: absolute;
-        left: 6rem;
-        bottom: 8rem;
+        left: 3rem;
+        bottom: 3rem;
         text-align: left;
         .bigTitle {
             font-size: 4rem;
@@ -84,8 +84,8 @@
     }
     .text-name {
         position: absolute;
-        top: 4rem;
-        right: 6rem;
+        top: 3rem;
+        right: 3rem;
         .enName {
             font-size: 1.7rem;
             font-weight: 900;
@@ -100,14 +100,15 @@
     }
     .alert_donate {
         position: absolute;
-        right: 2rem;
-        bottom: 2rem;
+        right: 3rem;
+        bottom: 3rem;
         background-color: var(--white);
         max-width: 500px;
         border-radius: 0.5rem;
         @include flex($a:stretch, $g: 0rem);
+        box-shadow: 0 0 8px 4px rgba(0,0,0,0.15);
         .info {
-            padding: 1rem;
+            padding: 1.5rem 2rem;
             border-right: solid 1px var(--grey_D4);
             @include flex;
             text-align: left;
@@ -117,10 +118,13 @@
             flex-direction: column;
             a{
                 white-space: nowrap;
-                padding: 1rem;
+                padding: 1.25rem;
             }
             a:nth-child(1) {
                 border-bottom: solid 1px var(--grey_D4);
+            }
+            .onlyDonate {
+                font-weight: 700;
             }
         }
     }
