@@ -15,7 +15,15 @@
             <h2 class="twName">吉吉語娜</h2>
         </div>
         <!-- TODO alert待補 -->
-        <div class="alert_donate"></div>
+        <div class="alert_donate">
+            <div class="info">
+                您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。
+            </div>
+            <div class="a_links">
+                <a href="#">單筆捐款</a>
+                <a href="#">定期捐款</a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -88,6 +96,32 @@
         }
         .enName, .twName {
             color: var(--white);
+        }
+    }
+    .alert_donate {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        background-color: var(--white);
+        max-width: 500px;
+        border-radius: 0.5rem;
+        @include flex($a:stretch, $g: 0rem);
+        .info {
+            padding: 1rem;
+            border-right: solid 1px var(--grey_D4);
+            @include flex;
+            text-align: left;
+        }
+        .a_links {
+            @include flex($g: 0rem);
+            flex-direction: column;
+            a{
+                white-space: nowrap;
+                padding: 1rem;
+            }
+            a:nth-child(1) {
+                border-bottom: solid 1px var(--grey_D4);
+            }
         }
     }
 }
