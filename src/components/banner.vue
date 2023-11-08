@@ -14,7 +14,7 @@
             <span class="enName">CHI & YUNA</span>
             <h2 class="twName">吉吉語娜</h2>
         </div>
-        <!-- TODO alert待補 -->
+        <!-- TODO 連結待補 -->
         <div class="alert_donate">
             <div class="info">
                 您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。

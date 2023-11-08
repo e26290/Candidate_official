@@ -74,8 +74,7 @@
             <img src="/images/img_person_3.png" alt="吉吉比讚">
         </div>
     </div>
-
-    <!-- TODO p高度調整 -->
+    
     <div class="contactUs tbp">
         <div class="container">
             <div class="row d-flex justify-content-end">

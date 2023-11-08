@@ -22,11 +22,26 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav_item"><a href="#">個人簡介</a></li>
-            <li class="nav_item"><a href="#">最新消息</a></li>
-            <li class="nav_item"><a href="#">展開行動</a></li>
-            <li class="nav_item"><a href="#">政策議題</a></li>
-            <li class="nav_item"><a href="#">留言給我們！</a></li>
+            <li class="nav_item">
+                <a href="#">個人簡介</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
+            <li class="nav_item">
+                <a href="#">最新消息</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
+            <li class="nav_item">
+                <a href="#">展開行動</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
+            <li class="nav_item">
+                <a href="#">政策議題</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
+            <li class="nav_item">
+                <a href="#">留言給我們！</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
         </ul>
 
         <a href="#" class="btn-donate">
@@ -109,25 +124,16 @@ header {
     }
     .nav_item {
         width: 100%;
+        @include flex($j:space-between);
         a {
             display: block;
             padding: 1.25rem 0;
             border-bottom: dashed 1px var(--grey_CC);
             text-align: left;
             position: relative;
-
-            // TODO 這邊icon沒有完成
-            &::after {
-                content: "\uf060";
-                display: block;
-                width: 1.5rem;
-                height: 1.5rem;
-                color: var(--primary);
-                position: absolute;
-                right: 30px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
+        }
+        &:hover {
+            color: var(--primary);
         }
     }
     .btn-donate {
@@ -152,8 +158,8 @@ header {
 }
 
 @media (max-width: 768px) {
-  header {
-    display: block;
-  }
+    header {
+        display: block;
+    }
 }
 </style>
