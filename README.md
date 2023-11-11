@@ -5,7 +5,7 @@
 
 ### 設計說明:
 設計／切版：Gill WUUUU <br>
-作品連結： <br>
+作品連結： https://e26290.github.io/Candidate_official/ <br>
 murmur：這是我初次使用 vite+vue3 的專案，對於資料的切割方式還有點不太熟悉，如果有任何建議或者指，歡迎告知我 ฅ^•ﻌ•^ฅ
 
 本次使用到的技術: <br>
