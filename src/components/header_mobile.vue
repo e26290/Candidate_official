@@ -3,7 +3,7 @@
         <div class="container-fluid d-flex justify-content-between">
             <img src="../assets/img_logo_mb.svg" alt="logo" class="logo">
             <div class="nav">
-                <a href="#" class="btn-donate">
+                <a href="#donate" class="btn-donate">
                     <i class="fa-solid fa-heart" style="color: #ed8391;"></i>
                     小額捐款
                 </a>
@@ -22,37 +22,45 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="nav_item">
-                <a href="#">個人簡介</a>
+            <li class="nav_item"  @click="closeMenu">
+                <a href="#about">個人簡介</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </li>
-            <li class="nav_item">
-                <a href="#">最新消息</a>
+            <li class="nav_item"  @click="closeMenu">
+                <a href="#news">最新消息</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </li>
-            <li class="nav_item">
-                <a href="#">展開行動</a>
+            <li class="nav_item"  @click="closeMenu">
+                <a href="#activity">展開行動</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </li>
-            <li class="nav_item">
-                <a href="#">政策議題</a>
+            <li class="nav_item"  @click="closeMenu">
+                <a href="#policy">政策議題</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </li>
-            <li class="nav_item">
-                <a href="#">留言給我們！</a>
+            <li class="nav_item"  @click="closeMenu">
+                <a href="#contactUs">留言給我們！</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
             </li>
         </ul>
 
-        <a href="#" class="btn-donate">
+        <a href="#donate" class="btn-donate"  @click="closeMenu">
             <i class="fa-solid fa-heart"></i>
             小額捐款
         </a>
         <ul class="media">
-            <li class="m_item"><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-            <li class="m_item"><a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
-            <li class="m_item"><a href="#"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
-            <li class="m_item"><a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+            <li class="m_item">
+                <a href="#"  @click="closeMenu">
+                    <i class="fa-brands fa-facebook fa-2x"></i></a></li>
+            <li class="m_item">
+                <a href="#"  @click="closeMenu">
+                    <i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
+            <li class="m_item">
+                <a href="#"  @click="closeMenu">
+                    <i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
+            <li class="m_item">
+                <a href="#"  @click="closeMenu">
+                    <i class="fa-brands fa-youtube fa-2x"></i></a></li>
         </ul>
     </div>
 </template>
@@ -107,6 +115,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
     @include flex($j:flex-start);
     flex-direction: column;
     padding: 1.5rem;
@@ -125,10 +134,10 @@ header {
     .nav_item {
         width: 100%;
         @include flex($j:space-between);
+        border-bottom: dashed 1px var(--grey_CC);
         a {
             display: block;
             padding: 1.25rem 0;
-            border-bottom: dashed 1px var(--grey_CC);
             text-align: left;
             position: relative;
         }

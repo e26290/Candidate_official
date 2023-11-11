@@ -1,5 +1,5 @@
 <template>
-    <div class="about tbp" v-if="true">
+    <div id="about" class="about tbp" v-if="true">
         <div class="about_img"></div>
         <div class="basic_info">
             <span class="sectitle">身段最軟 Ｑ 的立委候選人</span>
@@ -27,7 +27,7 @@
 
     <timeline />
 
-    <div class="activity tbp" v-if="true">
+    <div id="activity" class="activity tbp" v-if="true">
         <div class="container">
             <div class="sectionTitle">展開行動</div>
 
@@ -49,7 +49,7 @@
         <img src="/images/img_person_2.png" alt="語娜驚訝" class="person_img">
     </div>
 
-    <div class="policy tbp" v-if="true">
+    <div id="policy" class="policy tbp" v-if="true">
         <div class="container">
             <div class="sectionTitle">政策議題</div>
             <div class="row">
@@ -69,7 +69,7 @@
         <img src="/images/img_person_3.png" alt="吉吉比讚" class="person_img">
     </div>
     
-    <div class="contactUs tbp">
+    <div id="contactUs" class="contactUs tbp">
         <div class="container">
             <div class="row d-flex justify-content-end">
                 <div class="col-lg-6 col-md-12">
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <div class="donate tbp">
+    <div id="donate" class="donate tbp">
         <div class="mask"></div>
         <div class="container">
             <div class="row d-flex justify-content-end">

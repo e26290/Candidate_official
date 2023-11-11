@@ -1,5 +1,5 @@
 <template>
-  <div class="news" :style="{
+  <div id="news" class="news" :style="{
       backgroundImage: `url(${news[currentBackgroundIndex].img})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -134,7 +134,7 @@ position: relative;
     &:before {
       right: auto;
       text-align: right;
-      left: calc(-100% - 56px);
+      left: calc(-100% - 39px);
       padding-left: 0;
       border-left: none;
       border-right: 2px solid rgba(#fff, .5);

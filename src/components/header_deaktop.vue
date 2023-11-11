@@ -2,13 +2,13 @@
     <header>
         <img src="../assets/img_logo.svg" alt="logo" class="logo">
         <ul class="nav">
-            <li class="nav_item"><a href="#">個人簡介</a></li>
-            <li class="nav_item"><a href="#">最新消息</a></li>
-            <li class="nav_item"><a href="#">展開行動</a></li>
-            <li class="nav_item"><a href="#">政策議題</a></li>
-            <li class="nav_item"><a href="#">留言給我們！</a></li>
+            <li class="nav_item"><a href="#about">個人簡介</a></li>
+            <li class="nav_item"><a href="#news">最新消息</a></li>
+            <li class="nav_item"><a href="#activity">展開行動</a></li>
+            <li class="nav_item"><a href="#policy">政策議題</a></li>
+            <li class="nav_item"><a href="#contactUs">留言給我們！</a></li>
         </ul>
-        <a href="#" class="btn-donate">
+        <a href="#donate" class="btn-donate">
             <i class="fa-solid fa-heart"></i>
             小額捐款
         </a>

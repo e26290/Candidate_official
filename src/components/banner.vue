@@ -19,8 +19,8 @@
                 您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。
             </div>
             <div class="a_links">
-                <a href="#" class="onlyDonate">單筆捐款</a>
-                <a href="#" class="moonDonate">定期捐款</a>
+                <a href="#donate" class="onlyDonate">單筆捐款</a>
+                <a href="#donate" class="moonDonate">定期捐款</a>
             </div>
         </div>
     </div>

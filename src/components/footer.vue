@@ -1,15 +1,9 @@
 <template>
     <footer>
-        <!-- <ul class="f_sm">
-            <li class="item"><a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
-            <li class="item"><a href="#"><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
-            <li class="item"><a href="#"><i class="fa-brands fa-x-twitter fa-2x"></i></a></li>
-            <li class="item"><a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
-        </ul> -->
         <ul class="f_nav">
             <li><a href="#">首頁</a></li>
-            <li><a href="#">聯絡我們</a></li>
-            <li><a href="#">小額捐款</a></li>
+            <li><a href="#contactUs">聯絡我們</a></li>
+            <li><a href="#donate">小額捐款</a></li>
         </ul>
         <p class="copyright">© 2023 Gill WUUUU 版權所有，僅做 2023 The F2E 活動專案練習使用。</p>
     </footer>
