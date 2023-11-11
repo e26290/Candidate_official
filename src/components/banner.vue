@@ -1,7 +1,7 @@
 <template>
     <div id="banner">
         <div class="pic"></div>
-        <div class="text-title">
+        <div class="text-title" :class="{ 'title_animate': shouldAnimate }">
             <h1 class="bigTitle">貓若回頭</h1>
             <h1 class="bigTitle">不是貓沙，就是<span class="yellow">罐頭</span></h1>
             <span class="slogan">我不是渣，只是心懷天下，想給每個貓咪一個家。</span>
@@ -10,11 +10,11 @@
                 <i class="fa-regular fa-hand-back-fist fa-2x"></i>
             </div>
         </div>
-        <div class="text-name">
+        <div class="text-name" :class="{ 'title_animate': shouldAnimate }">
             <span class="enName">CHI & YUNA</span>
             <h2 class="twName">吉吉語娜</h2>
         </div>
-        <div class="alert_donate">
+        <div class="alert_donate" :class="{ 'title_animate': shouldAnimate }">
             <div class="info">
                 您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。
             </div>
@@ -27,6 +27,14 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+
+const shouldAnimate = ref(false);
+
+onMounted(() => {
+    // 在頁面載入時添加 CSS class 以觸發動畫
+    shouldAnimate.value = true;
+});
 </script>
 
 <style scoped lang="scss">
@@ -55,6 +63,8 @@
         left: 3rem;
         bottom: 3rem;
         text-align: left;
+
+        @include fadeInUp;
         .bigTitle {
             font-size: 4rem;
             font-weight: bold;
@@ -189,4 +199,7 @@
         }
     }
 }
+
+@include fadeInUp_animated;
+
 </style>

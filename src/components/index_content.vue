@@ -1,6 +1,6 @@
 <template>
     <div id="about" class="about tbp" v-if="true">
-        <div class="about_img"></div>
+        <div class="about_img" :class="{ 'title_animate': shouldAnimate }"></div>
         <div class="basic_info">
             <span class="sectitle">身段最軟 Ｑ 的立委候選人</span>
             <h2 class="name">吉吉語娜<span class="enName">CHICHI & YUNA</span></h2>
@@ -118,9 +118,9 @@ import timeline from './timeline.vue';
 import Carousel_vue from './carousel.vue';
 import contactUs_form from './contactUs_form.vue';
 import donate_form from './donate_form.vue';
-import { reactive } from 'vue';
+import { ref, onMounted } from 'vue';
 
-const goal = reactive([
+const goal = ref([
     {
         number: '45',
         name: '活動場次'
@@ -133,7 +133,7 @@ const goal = reactive([
     }
 ]);
 
-const policies = reactive([
+const policies = ref([
     {
         number: '01',
         name: `推動寵物醫療
@@ -163,6 +163,14 @@ const policies = reactive([
         ]
     }
 ]);
+
+
+// 動畫
+const shouldAnimate = ref(false);
+onMounted(() => {
+    // 在頁面載入時添加 CSS class 以觸發動畫
+    shouldAnimate.value = true;
+});
 </script>
 
 <style scoped lang="scss">
@@ -205,6 +213,7 @@ const policies = reactive([
         background-position: top right 40%;
         background-size: cover;
         background-repeat: no-repeat;
+        @include fadeInUp;
 
         @include media-breakpoint-up(768px){
             background-image: url(/images/img_about_768.png);
@@ -439,4 +448,6 @@ const policies = reactive([
         background-image: url(/images/img_donate_bg_mask.png);
     }
 }
+
+@include fadeInUp_animated;
 </style>

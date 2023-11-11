@@ -173,7 +173,10 @@ position: relative;
 }
 &__img {
   max-width: 100%;
-  // box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05); /* 在移入時放大圖片 */
+  }
 }
 &-container {
   width: 100%;

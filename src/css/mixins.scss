@@ -36,10 +36,6 @@
     }
 }
 
-
-
-
-
 @mixin mask {
     position: absolute;
     left: 0;
@@ -48,4 +44,29 @@
     height: 100%;
     background: rgba(#333, .8);
     content: "";
+}
+
+@mixin fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@mixin fadeInUp_animated {
+    .title_animate {
+        /* 使用 @keyframes 定義動畫效果 */
+        animation: fadeInUp 1s ease-in-out;
+        animation-fill-mode: forwards; /* 動畫結束時保持最終樣式 */
+        animation-iteration-count: 1; /* 動畫執行次數 */
+    }
+    
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
