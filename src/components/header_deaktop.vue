@@ -1,15 +1,14 @@
 <template>
     <header>
-        <!-- <img src="/images/img_logo.png" alt="logo" class="logo"> -->
-        <img src="https://i.pinimg.com/564x/4f/a0/64/4fa0642080a608ddaccb4fa0d501a384.jpg" alt="logo" class="logo">
+        <img src="../assets/img_logo.svg" alt="logo" class="logo">
         <ul class="nav">
-            <li class="nav_item"><a href="#">個人簡介</a></li>
-            <li class="nav_item"><a href="#">最新消息</a></li>
-            <li class="nav_item"><a href="#">展開行動</a></li>
-            <li class="nav_item"><a href="#">政策議題</a></li>
-            <li class="nav_item"><a href="#">留言給我們！</a></li>
+            <li class="nav_item"><a href="#about">個人簡介</a></li>
+            <li class="nav_item"><a href="#news">最新消息</a></li>
+            <li class="nav_item"><a href="#activity">展開行動</a></li>
+            <li class="nav_item"><a href="#policy">政策議題</a></li>
+            <li class="nav_item"><a href="#contactUs">留言給我們！</a></li>
         </ul>
-        <a href="#" class="btn-donate">
+        <a href="#donate" class="btn-donate">
             <i class="fa-solid fa-heart"></i>
             小額捐款
         </a>
@@ -69,5 +68,14 @@ ul.nav {
 .media {
     @include flex($g:1.2rem);
     margin-top: 1.5rem;
+    a {
+        color: var(--grey_9F);
+    }
 }
+header {
+    @include media-breakpoint-up(1024px) {
+        display: none;
+    }
+}
+
 </style>
