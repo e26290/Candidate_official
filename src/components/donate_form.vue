@@ -58,9 +58,13 @@ function setCustomInputState(state) {
 }
 .donateOption {
     @include flex;
+    flex-wrap: wrap;
     button, input {
         background-color: var(--white);
         color: var(--black);
+    }
+    button {
+        white-space: nowrap;
     }
     .active {
         background-color: var(--primary);

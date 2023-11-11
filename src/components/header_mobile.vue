@@ -4,11 +4,11 @@
             <img src="../assets/img_logo_mb.svg" alt="logo" class="logo">
             <div class="nav">
                 <a href="#" class="btn-donate">
-                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart" style="color: #ed8391;"></i>
                     小額捐款
                 </a>
                 <button type="button" @click="toggleMenu">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars" style="color: #ed8391;"></i>
                 </button>
             </div>
         </div>
@@ -80,8 +80,8 @@ header {
     position: fixed;
     bottom: 0;
     background-color: var(--white);
-    padding: 0 0.75rem;
     box-shadow: 0 0 8px 4px rgba(0,0,0,0.15);
+    z-index: 999;
     .logo{
         width: 10rem;
     }
@@ -157,9 +157,14 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-    header {
+header {
+    @include media-breakpoint-up(1024px) {
         display: block;
+    }
+    @include media-breakpoint-up(425px) {
+        .nav .btn-donate {
+            padding: 0 1rem;
+        }
     }
 }
 </style>

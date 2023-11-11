@@ -10,7 +10,7 @@
         <div class="carousel-inner">
             <div class="carousel-item" v-for="data in carouselData" v-bind:class="{ active: data.active }">
                 <img :src="data.img" class="d-block w-100" :alt="data.name">
-                <div class="carousel-caption d-none d-md-block text-carousel">
+                <div class="carousel-caption d-md-block text-carousel">
                     <h3>{{ data.name }}</h3>
                     <div class="info">{{ data.description }}</div>
                 </div>
@@ -42,7 +42,7 @@ const carouselData = reactive([
     },  {
         img: '/images/img_carousel_02.png',
         name: '過去是 7 秒，過不去是 7 天｜交通法規課程',
-        description: `2023年11月1日，競選部在市民廣場舉辦了貓咪外出交通安全課程。活動當天，共有 99 名飼主參加了課程。競選部表示，貓咪外出時，如果沒有使用牽繩，很容易發生車禍。因此，飼主在帶貓咪外出時，一定要使用牽繩，並注意交通安全。課程上，講師首先講解了貓咪外出時發生車禍的常見原因，並介紹了如何使用牽繩牽貓咪外出。
+        description: `2023年11月1日，競選部在市民廣場舉辦了貓咪外出交通安全課程。活動當天，共有 99 名飼主參加了課程。競選部表示，貓咪外出時，如果沒有使用牽繩，很容易發生車禍。因此，飼主在帶貓咪外出時，一定要使用牽繩，並注意交通安全。
                 
             #外出一定要使用牽繩 #注意交通安全`,
         active: false
@@ -78,14 +78,12 @@ const carouselData = reactive([
 .carousel-indicators button {
     background-color: var(--primary);
 }
-
-@media (max-width:1200px) {
-    .text-carousel {
+.text-carousel {
+    @include media-breakpoint-up(1200px) {
         position: relative;
         left: 0;
         padding: 2rem;
     }
-    
-    
 }
+
 </style>

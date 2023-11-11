@@ -76,5 +76,9 @@ function submitForm() {
     .form_btn {
         margin-top: 1rem;
     }
+
+    @include media-breakpoint-up(425px) {
+        padding: 0;
+    }
 }
 </style>

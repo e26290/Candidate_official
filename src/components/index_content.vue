@@ -22,9 +22,7 @@
                 </p>
             </div>
         </div>
-        <div class="person_img">
-            <img src="/images/img_person_1.png" alt="語娜裝可愛">
-        </div>
+        <img src="/images/img_person_1.png" alt="語娜裝可愛" class="person_img">
     </div>
 
     <timeline />
@@ -40,7 +38,7 @@
                 目前我們已經達成 ...
             </h4>
             <div class="row goal">
-                <div class="col-md-3 card_goal" v-for="data in goal">
+                <div class="col-md-3 col-sm-4 card_goal" v-for="data in goal">
                     <span class="number">{{ data.number }}</span>
                     <hr class="hr">
                     <span class="name">{{ data.name }}</span>
@@ -48,9 +46,7 @@
             </div>
             
         </div>
-        <div class="person_img">
-            <img src="/images/img_person_2.png" alt="語娜驚訝">
-        </div>
+        <img src="/images/img_person_2.png" alt="語娜驚訝" class="person_img">
     </div>
 
     <div class="policy tbp" v-if="true">
@@ -69,16 +65,14 @@
                 </div>
             </div>
         </div>
-        <div class="person_img">
-            <!-- 這張拿去ai重算 -->
-            <img src="/images/img_person_3.png" alt="吉吉比讚">
-        </div>
+        <!-- 這張拿去ai重算 -->
+        <img src="/images/img_person_3.png" alt="吉吉比讚" class="person_img">
     </div>
     
     <div class="contactUs tbp">
         <div class="container">
             <div class="row d-flex justify-content-end">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-12">
                     <h3>感謝您瀏覽我們的網頁</h3>
                     <p>如果您對政策服務項目感興趣或者對我們有任何的建議，歡迎留言給我們。<br />我們將在收到資料後儘快與您聯絡。再次感謝您的光臨!</p>
                     <contactUs_form />
@@ -91,7 +85,7 @@
         <div class="mask"></div>
         <div class="container">
             <div class="row d-flex justify-content-end">
-                <div class="col-md-6 content">
+                <div class="col-lg-6 col-md-12 content">
                     <h3>因為您 讓弱勢貓咪得到幫助</h3>
                     <donate_form />
                     <button type="button" class="btn btn-primary form_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -131,10 +125,10 @@ const goal = reactive([
         number: '45',
         name: '活動場次'
     },{
-        number: '100 h',
+        number: '100h',
         name: '活動時數'
     },{
-        number: '300 k',
+        number: '300k',
         name: '參與人次'
     }
 ]);
@@ -182,14 +176,22 @@ const policies = reactive([
     @include tbp;
 }
 .person_img  {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        img {
-            transform: scale(0.5);
-            transform-origin: left bottom;
-        }
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scale(0.5);
+    transform-origin: left bottom;
+
+    @include media-breakpoint-up(1360px) {
+        transform: scale(0.4);
     }
+    @include media-breakpoint-up(830px) {
+        transform: scale(0.3);
+    }
+    @include media-breakpoint-up(768px) {
+        display: none;
+    } 
+}
 // ------------------------------------------------------------------------
 
 .about {
@@ -200,26 +202,48 @@ const policies = reactive([
         width: 100%;
         height: 600px;
         background-image: url(/images/img_about.png);
-        background-position: top;
+        background-position: top right 40%;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-up(768px){
+            background-image: url(/images/img_about_768.png);
+            background-position: top;
+        }
+        @include media-breakpoint-up(576px){
+            background-image: url(/images/img_about_576.png);
+            background-position: top right 55%;
+        }
     }
     .basic_info {
         background-color: var(--black);
         color: var(--white);
-        max-width: 55%;
+        max-width: 70%;
         padding: 2.5rem;
         padding-bottom: 3.5rem;
         @include flex($a:end);
         flex-direction: column;
         position: relative;
         span, h2 {
-            width: 41%;
+            width: 54%;
             text-align: left;
         }
         .enName {
             font-size: 1rem;
             margin-left: 0.5rem;
+        }
+        
+        @include media-breakpoint-up(1024px) {
+            max-width: 100%;
+            span, h2 {
+                width: 79%;
+            }
+        }
+        @include media-breakpoint-up(768px) {
+            max-width: 100%;
+            span, h2 {
+                width: 95%;
+            }
         }
     }
     .about_info {
@@ -245,8 +269,32 @@ const policies = reactive([
             line-height: 150%;
         }
 
+        @include media-breakpoint-up(1024px) {
+            .about_box {
+                max-width: 80%;
+            }
+        }
+        @include media-breakpoint-up(768px) {
+            .about_box {
+                max-width: 95%;
+            }
+            .slogan {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 0.875rem;
+            }
+        }
     }
 }
+.about {
+    .person_img img {
+        @include media-breakpoint-up(1200px) {
+            transform: scale(0.33);
+        }
+    }
+}
+
 .activity {
     background-color: var(--grey_F3);
     position: relative;
@@ -274,6 +322,18 @@ const policies = reactive([
         font-weight: 700;
         line-height: 100%;
         color: var(--deepPink);
+    }
+
+    @include media-breakpoint-up(576px) {
+        .goal {
+            flex-wrap: nowrap;
+        }
+        .card_goal {
+            width: 30%;
+        }
+        .number {
+            font-size: 2.5rem;
+        }
     }
 }
 .policy {
@@ -325,18 +385,29 @@ const policies = reactive([
         position: relative;
         top: -3rem;
     }
+
+    @include media-breakpoint-up(768px) {
+        padding-bottom: 10rem;
+        .card_policy {
+            margin-bottom: 1.5rem;
+        }
+    }
 }
 .contactUs {
     background-image: url(/images/img_conact_bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 16rem 0;
+    // padding: 16rem 0;
     h3 {
         font-size: 1.5rem;
     }
     p {
         color: var(--grey_33);
+    }
+
+    @include media-breakpoint-up(990px) {
+        background-image: url(/images/img_conact_bg_mask.png);
     }
 }
 .donate {
@@ -353,17 +424,19 @@ const policies = reactive([
         @include flex;
         flex-wrap: wrap
     }
+    .modal-body {
+        @include flex;
+        flex-direction: column;
+    }
     .modal-body img {
         width: 60%;
     }
     .form_btn {
         margin-top: 1rem;
     }
-}
 
-@media (max-width: 1200px) {
-    .person_img img {
-        transform: scale(0.33);
+    @include media-breakpoint-up(990px) {
+        background-image: url(/images/img_donate_bg_mask.png);
     }
 }
 </style>

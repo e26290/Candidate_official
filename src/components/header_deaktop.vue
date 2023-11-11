@@ -72,10 +72,10 @@ ul.nav {
         color: var(--grey_9F);
     }
 }
-
-@media (max-width: 768px) {
-  header {
-    display: none;
-  }
+header {
+    @include media-breakpoint-up(1024px) {
+        display: none;
+    }
 }
+
 </style>

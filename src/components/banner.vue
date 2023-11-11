@@ -14,10 +14,9 @@
             <span class="enName">CHI & YUNA</span>
             <h2 class="twName">吉吉語娜</h2>
         </div>
-        <!-- TODO 連結待補 -->
         <div class="alert_donate">
             <div class="info">
-                您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。如果您能為牠們做些什麼，會是多麼美好的事～
+                您的一點小小捐款，可以為流浪動物帶來巨大的改變。牠們將不再挨餓、受凍、受傷，而是可以健康快樂地生活。
             </div>
             <div class="a_links">
                 <a href="#" class="onlyDonate">單筆捐款</a>
@@ -43,6 +42,13 @@
         background-position: center 30%;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @include media-breakpoint-up(768px){
+            background-image: url(/images/img_banner_768.png);
+        }
+        @include media-breakpoint-up(576px){
+            background-image: url(/images/img_banner_576.png);
+        }
     }
     .text-title {
         position: absolute;
@@ -130,17 +136,57 @@
     }
 }
 
-@media (max-width: 1200px) {
-    #banner .text-title {
-        left: 2rem;
-        bottom: 2rem;
-        .bigTitle {
-            font-size: 3rem;
+#banner {
+    @include media-breakpoint-up(1360px){
+        .text-title {
+            left: 2rem;
+            bottom: 6rem;
+            .bigTitle {
+                font-size: 3rem;
+            }
+            .slogan {
+                letter-spacing: 0.05rem;
+            }
+        }
+        .text-name {
+            top: 2rem;
+            right: 2rem;
+        }
+        .alert_donate{
+            max-width: 360px;
+            right: 1rem;
+            bottom: 6rem;
+            .info {
+                padding: 1rem;
+            }
+            .a_links a {
+                padding: 1rem;
+            }
         }
     }
-    #banner .text-name {
-        top: 2rem;
-        right: 2rem;
+    @include media-breakpoint-up(820px) {
+        .alert_donate {
+            display: none;
+        }
+        .text-name {
+            right: inherit;
+            left: 1rem;
+            filter: drop-shadow(0px 2px 4px #333);
+        }
+    }
+    @include media-breakpoint-up(576px) {
+        .text-title {
+            left: 1rem;
+            .bigTitle {
+                font-size: 2.5rem;
+            }
+            .slogan {
+                font-size: 1rem;
+            }
+            .pinkbox .boxTitle {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 </style>
