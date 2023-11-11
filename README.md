@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+![網站照片](public/images/img_cover.png)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 2023THE F2E 立委競選官網
+## 吉吉語娜 立委競選官網 ｜網站設計
 
-## Recommended IDE Setup
+### 設計說明:
+設計／切版：Gill WUUUU <br>
+作品連結： <br>
+murmur：這是我初次使用 vite+vue3 的專案，對於資料的切割方式還有點不太熟悉，如果有任何建議或者指，歡迎告知我 ฅ^•ﻌ•^ฅ
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+本次使用到的技術: <br>
+‧ vue3 <br>
+‧ vite <br>
+‧ scss <br>
+‧ bootstrap <br>
+
+
+免責聲明：
+本網站所載的所有資料、商標、標誌、圖像、連結及其他資料等，只供此聯席使用，請勿任意轉載及商業使用。
